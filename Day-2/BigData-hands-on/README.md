@@ -43,13 +43,16 @@ numAs = data.filter(lambda s: 'a' in s).count()
 
 numBs = data.filter(lambda s: 'b' in s).count()
 
-print("Lines with a: %i, lines with b: %i" % (numAs, numBs))```
+print("Lines with a: %i, lines with b: %i" % (numAs, numBs))
+```
 
 If you have problems with copy-pasting the code from above, you can download it from the following link: <https://gitlab.tel.fer.hr/environment_check.py>.
 
 Finally, select the cell where you pasted the code and click **Run -> Run Selected Cells** (or a grey play button ![](003.png) above the cell) in the JupyterLab. If everything works, the result would be as follows:
 
-```Lines with a: 917, lines with b: 406```
+```
+Lines with a: 917, lines with b: 406
+```
 # Download Datasets
 Open a terminal of the Docker instance terminal by clicking **File -> New -> Terminal** in the JupyterLab. Run the following two commands which will download the required datasets:
 
