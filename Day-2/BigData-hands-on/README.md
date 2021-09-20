@@ -1,4 +1,4 @@
-﻿Hands-on session:  Big Data Analytics and Stream Processing on Apache Spark
+﻿#Hands-on session:  Big Data Analytics and Stream Processing on Apache Spark
 
 During this hands-on session you will learn using Apache Spark for processing both the unstructured and structured Big Data. To be more precise, you will learn:
 
@@ -23,11 +23,9 @@ To write your application and test it locally before running on an actual Spark 
 1. After the installation finishes it will show you the address at which running instance of JupyterLab is listening. The address usually starts with <http://localhost:8888/?token=> and finishes with a required hexadecimal token. 
 1. (optionally) If you do not know the required token, you can find it by running the command jupyter server list within a terminal of the running Docker instance, as shown in the following Figure. You can start the terminal by clicking on the button ![](001.png) in the upper right corner of the Docker application.
 
-![Graphical user interface, text
-
-Description automatically generated](002.png)
-
+![](002.png)
 *Figure  SEQ Figure \\* ARABIC 1 - Finding JupyterLab token*
+
 # Check Development Environment
 To check that the development environment is correctly set up, start a new notebook by clicking **File -> New -> Notebook** in the JuypterLab. Then paste the following code:
 
