@@ -19,7 +19,7 @@ Follow [these instructions](https://docs.docker.com/get-docker/) to install Dock
 # Setup Development Environment
 To write your application and test it locally before running on an actual Spark cluster you will use JupyterLab, a web-based interactive development environment for Jupyter notebooks, code, and data. Install a PySpark Docker image which will run your own instance of JupyterLab as follows:
 
-1. Run the following command from your terminal: `docker run -p 8888:8888 -e JUPYTER\_ENABLE\_LAB=yes --name pyspark jupyter/pyspark-notebook`
+1. Run the following command from your terminal: `docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes --name pyspark jupyter/pyspark-notebook`
 1. After the installation finishes it will show you the address at which running instance of JupyterLab is listening. The address usually starts with <http://localhost:8888/?token=> and finishes with a required hexadecimal token. 
 1. (optionally) If you do not know the required token, you can find it by running the command jupyter server list within a terminal of the running Docker instance, as shown in the following Figure. You can start the terminal by clicking on the button ![](001.png) in the upper right corner of the Docker application.
 
@@ -35,7 +35,7 @@ session = SparkSession.builder.getOrCreate()
 
 context = session.sparkContext
 
-file = "/home/jovyan/.jupyter/jupyter\_notebook\_config.py"
+file = "/home/jovyan/.jupyter/jupyter/notebook/config.py"
 
 data = context.textFile(file).cache()
 
@@ -88,7 +88,7 @@ wget <https://gitlab.tel.fer.hr/sorted_data-100k.csv>
 # Task1: Processing of a log file locally
 In this task you will use the PySpark’s RDD API to process file `Thunderbird-100k.csv`, which is a sequence of messages:
 ```
-\-  1131523501 2005.11.09 aadmin1 Nov 10 00:05:01 src@aadmin1 in.tftpd[14620]: tftp: client does not accept options
+\- 1131523501 2005.11.09 aadmin1 Nov 10 00:05:01 src@aadmin1 in.tftpd[14620]: tftp: client does not accept options
 
 \- 1131524071 2005.11.09 tbird-admin1 Nov 10 00:14:31 local@tbird-admin1 postfix/postdrop[10896]: warning: unable to look up public/pickup: No such file or directory
 
@@ -101,10 +101,10 @@ There are two subtasks that you should solve:
 1. count number of alert and non-alert messages by the day of the week and 
 1. find top-50 words that appear in the explanation part of messages (followed by first ":" after the time of a message which has two ":") for each year.
 # Task2: Processing of a log file locally
-In this task you will use PySpark’s DataFrame API to analyze taxi trip data in file sorted\_data-100k.csv. There are two subtasks that you should solve:
+In this task you will use PySpark’s DataFrame API to analyze taxi trip data in file `sorted_data-100k.csv`. There are two subtasks that you should solve:
 
-1. For each year (according to `dropoff\_datetime`), sort taxi drivers (identified by `hack\_license`) by the average `tip\_amount` divided by the `trip\_time\_in\_secs`. Print top-20 such drivers for each year.
-1. Prepare a Spark DataFrame containing information about taxi rides to [perform k-means clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) of taxi drivers (identified by `hack\_license`). As features, use the following columns divided by the `total\_amount`: 
+1. For each year (according to `dropoff_datetime`), sort taxi drivers (identified by `hack_license`) by the average `tip_amount` divided by the `trip_time_in_secs`. Print top-20 such drivers for each year.
+1. Prepare a Spark DataFrame containing information about taxi rides to [perform k-means clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) of taxi drivers (identified by `hack_license`). As features, use the following columns divided by the `total_amount`: 
 
 |fare\_amount|
 | - |
@@ -124,21 +124,21 @@ ssh <radionica@ssds-cm.cro-ngi.hr>
 
 The password will be given during the live hands-on session. Then, create and enter your own directory on the Spark gateway machine by running the following commands:
 ```
-mkdir name\_surname 
+mkdir name_surname 
 
-cd name\_surname 
+cd name_surname 
 ```
 After that, initialize environment variables by running the following command:
 ```
-source ../python\_setup.sh
+source ../python_setup.sh
 ```
 Open the nano editor by running the following command:
 ```
-nano name\_of\_program.py 
+nano name_of_program.py 
 ```
-Paste your code from the first or second tasks and change paths to dataset files from `/home/jovyan/Thunderbird-100k.csv` and `/home/jovyan/sorted\_data-100k.csv` to HDFS locations `/user/radionica/Thunderbird-100k.csv` and `/user/radionica/sorted\_data-100k.csv`.  When you are finished press `CTRL+x`, then press `y` and finally press `Enter`. Run your program with the following command:
+Paste your code from the first or second tasks and change paths to dataset files from `/home/jovyan/Thunderbird-100k.csv` and `/home/jovyan/sorted_data-100k.csv` to HDFS locations `/user/radionica/Thunderbird-100k.csv` and `/user/radionica/sorted_data-100k.csv`.  When you are finished press `CTRL+x`, then press `y` and finally press `Enter`. Run your program with the following command:
 ```
-spark-submit --master yarn name\_of\_program.py
+spark-submit --master yarn name_of_program.py
 ```
 Shuting Down the Docker Application
 
