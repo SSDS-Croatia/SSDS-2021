@@ -57,9 +57,9 @@ Lines with a: 917, lines with b: 406
 Open a terminal of the Docker instance terminal by clicking **File -> New -> Terminal** in the JupyterLab. Run the following two commands which will download the required datasets:
 
 ```
-wget <https://gitlab.tel.fer.hr/Thunderbird-100k.csv>
+wget https://gitlab.tel.fer.hr/Thunderbird-100k.csv
 
-wget <https://gitlab.tel.fer.hr/sorted_data-100k.csv>
+wget https://gitlab.tel.fer.hr/sorted_data-100k.csv
 ```
 
 `Thunderbird-100k.csv` is a tiny portion of an open dataset of logs collected from a Thunderbird supercomputer system at Sandia National Labs (SNL) in Albuquerque, with 9,024 processors and 27,072GB memory. The log contains alert and non-alert messages identified by alert category tags. In the first column of the log, "-" indicates non-alert messages while others are alert messages. The label information is amenable to alert detection and prediction research.
