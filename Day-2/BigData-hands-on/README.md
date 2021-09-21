@@ -142,6 +142,20 @@ Paste your code from the first or second tasks and change paths to dataset files
 ```
 spark-submit --master yarn name_of_program.py
 ```
-Shuting Down the Docker Application
+
+Before running the code, please be sure that your have set `spark.master` application property, which defines the cluster manager to connect to, as `yarn`. The list of supported values can be find here: [allowed master URL's](https://spark.apache.org/docs/latest/submitting-applications.html#master-urls). In your code you can easily set `spark.master` as `yarn` with one of the following code snippets:
+
+```
+session = SparkSession.builder.master("yarn").getOrCreate()
+context = session.sparkContext
+```
+
+or
+
+```
+context = SparkContext.getOrCreate(SparkConf().setMaster("yarn"))
+```
+
+# Shuting Down the Docker Application
 
 You can shut down the Docker application by clicking on the button ![](004.png) in the upper right corner of the Docker application, shown in Figure 1.
