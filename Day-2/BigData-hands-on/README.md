@@ -119,7 +119,7 @@ The previous two task were running locally on a single machine. In this task we 
 First, connect yourself to the Spark gateway machine by running the following command from your terminal:
 
 ```
-ssh <radionica@ssds-cm.cro-ngi.hr>
+ssh radionica@ssds-cm.cro-ngi.hr
 ```
 
 The password will be given during the live hands-on session. Then, create and enter your own directory on the Spark gateway machine by running the following commands:
