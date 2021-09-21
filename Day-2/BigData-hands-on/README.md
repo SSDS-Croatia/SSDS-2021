@@ -35,7 +35,7 @@ session = SparkSession.builder.getOrCreate()
 
 context = session.sparkContext
 
-file = "/home/jovyan/.jupyter/jupyter/notebook/config.py"
+file = "/home/jovyan/.jupyter/jupyter_notebook_config.py"
 
 data = context.textFile(file).cache()
 
@@ -64,7 +64,7 @@ wget https://gitlab.tel.fer.hr/sorted_data-100k.csv
 
 `Thunderbird-100k.csv` is a tiny portion of an open dataset of logs collected from a Thunderbird supercomputer system at Sandia National Labs (SNL) in Albuquerque, with 9,024 processors and 27,072GB memory. The log contains alert and non-alert messages identified by alert category tags. In the first column of the log, "-" indicates non-alert messages while others are alert messages. The label information is amenable to alert detection and prediction research.
 
-`sorted\_data-100k.csv` is a tiny portion of the dataset for the 2015 Grand Challenge, which is based on a data set released under the FOIL (The Freedom of Information Law) and made public by Chris Whong (<http://chriswhong.com/open-data/foil_nyc_taxi/>). This dataset consists of reports of taxi trips including starting point, drop-off point, corresponding timestamps, and information related to the payment. The columns within this dataset are listed below:
+`sorted_data-100k.csv` is a tiny portion of the dataset for the 2015 Grand Challenge, which is based on a data set released under the FOIL (The Freedom of Information Law) and made public by Chris Whong (<http://chriswhong.com/open-data/foil_nyc_taxi/>). This dataset consists of reports of taxi trips including starting point, drop-off point, corresponding timestamps, and information related to the payment. The columns within this dataset are listed below:
 
 |medallion|an md5sum of the identifier of the taxi - vehicle bound|
 | - | - |
@@ -88,11 +88,11 @@ wget https://gitlab.tel.fer.hr/sorted_data-100k.csv
 # Task1: Processing of a log file locally
 In this task you will use the PySpark’s RDD API to process file `Thunderbird-100k.csv`, which is a sequence of messages:
 ```
-\- 1131523501 2005.11.09 aadmin1 Nov 10 00:05:01 src@aadmin1 in.tftpd[14620]: tftp: client does not accept options
+- 1131523501 2005.11.09 aadmin1 Nov 10 00:05:01 src@aadmin1 in.tftpd[14620]: tftp: client does not accept options
 
-\- 1131524071 2005.11.09 tbird-admin1 Nov 10 00:14:31 local@tbird-admin1 postfix/postdrop[10896]: warning: unable to look up public/pickup: No such file or directory
+- 1131524071 2005.11.09 tbird-admin1 Nov 10 00:14:31 local@tbird-admin1 postfix/postdrop[10896]: warning: unable to look up public/pickup: No such file or directory
 
-\- 1131524073 2005.11.09 tbird-admin1 Nov 10 00:14:33 local@tbird-admin1 postfix/postdrop[10900]: warning: unable to look up public/pickup: No such file or directory
+- 1131524073 2005.11.09 tbird-admin1 Nov 10 00:14:33 local@tbird-admin1 postfix/postdrop[10900]: warning: unable to look up public/pickup: No such file or directory
 ```
 The log contains both alert and non-alert messages, where "-" at the beginning indicates a non-alert message. Each message also has a timestamp followed by the date. 
 
@@ -107,11 +107,11 @@ In this task you will use PySpark’s DataFrame API to analyze taxi trip data in
 1. Prepare a Spark DataFrame containing information about taxi rides to [perform k-means clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) of taxi drivers (identified by `hack_license`). As features, use the following columns divided by the `total_amount`: 
 
 |fare\_amount|
-| - |
 |surcharge|
 |mta\_tax|
 |tip\_amount|
 |tolls\_amount|
+
 Build your model, train it, and evaluate against the test dataset. 
 # Task3: Running Spark in the cluster
 The previous two task were running locally on a single machine. In this task we will run them in an actual Spark cluster. 
