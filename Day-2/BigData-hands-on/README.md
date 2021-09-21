@@ -104,8 +104,10 @@ There are two subtasks that you should solve:
 In this task you will use PySpark’s DataFrame API to analyze taxi trip data in file `sorted_data-100k.csv`. There are two subtasks that you should solve:
 
 1. For each year (according to `dropoff_datetime`), sort taxi drivers (identified by `hack_license`) by the average `tip_amount` divided by the `trip_time_in_secs`. Print top-20 such drivers for each year.
-1. Prepare a Spark DataFrame containing information about taxi rides to [perform k-means clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) of taxi drivers (identified by `hack_license`). As features, use the following columns divided by the `total_amount`: 
+1. Prepare a Spark DataFrame containing information about taxi rides to [perform k-means clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) of taxi drivers (identified by `hack_license`). When building your model, please consult the following source: [K Means Clustering using PySpark on Big Data](https://towardsdatascience.com/k-means-clustering-using-pyspark-on-big-data-6214beacdc8b). As features, use the following columns divided by the `total_amount`: 
 
+| Columns for features |
+| - |
 |fare\_amount|
 |surcharge|
 |mta\_tax|
