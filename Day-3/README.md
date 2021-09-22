@@ -14,7 +14,7 @@ https://drive.google.com/drive/folders/1snLA7EnN5LDiEw-vOsIwdCY-QBaiaUe-?usp=sha
 
 ####  TensorFlow: going beyond deep learning (Rok Hribar)
 
-TBD
+https://drive.google.com/drive/folders/1WkK2c7P9yDfRN0GvakVbj5K6Yf4YgodI?usp=sharing
 
 #### Large scale computing and storage in particle physics and astrophysics  (Manuel Delfino)
 
