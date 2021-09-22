@@ -6,14 +6,15 @@ TBD
 
 ### Lecture materials and outline
 
-
-####  TensorFlow: going beyond deep learning (Rok Hribar)
-
 TBD
 
 #### Keras and deep learning through examples (Rok Hribar)
 
-TBD
+https://drive.google.com/drive/folders/1snLA7EnN5LDiEw-vOsIwdCY-QBaiaUe-?usp=sharing
+
+####  TensorFlow: going beyond deep learning (Rok Hribar)
+
+https://drive.google.com/drive/folders/1WkK2c7P9yDfRN0GvakVbj5K6Yf4YgodI?usp=sharing
 
 #### Large scale computing and storage in particle physics and astrophysics  (Manuel Delfino)
 
