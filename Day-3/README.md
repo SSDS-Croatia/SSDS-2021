@@ -6,12 +6,13 @@ TBD
 
 ### Lecture materials and outline
 
-
-####  TensorFlow: going beyond deep learning (Rok Hribar)
-
 TBD
 
 #### Keras and deep learning through examples (Rok Hribar)
+
+https://drive.google.com/drive/folders/1snLA7EnN5LDiEw-vOsIwdCY-QBaiaUe-?usp=sharing
+
+####  TensorFlow: going beyond deep learning (Rok Hribar)
 
 TBD
 
