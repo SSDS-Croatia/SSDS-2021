@@ -100,6 +100,9 @@ There are two subtasks that you should solve:
 
 1. count number of alert and non-alert messages by the day of the week and 
 1. find top-50 words that appear in the explanation part of messages (followed by first ":" after the time of a message which has two ":") for each year.
+
+You can find solutions for these two subtasks within this repository in file Task1.ipynb.
+
 # Task2: Processing of a log file locally
 In this task you will use PySpark’s DataFrame API to analyze taxi trip data in file `sorted_data-100k.csv`. There are two subtasks that you should solve:
 
