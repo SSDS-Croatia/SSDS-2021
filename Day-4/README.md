@@ -1,21 +1,17 @@
-# SSDS 2021  - [6<sup>th</sup> Int'l Summer School on Data Science](https://sites.google.com/view/ssdatascience2021)
+Requirements for the workshop
 
-## Day 4 - TBD
+1) Chrome web browser is needed
+2) Install Metamask crypto wallet for Chrome (https://metamask.io/download.html)
+3) Select Ropsten Test Network under Metamask, go to https://faucet.ropsten.be/ and add test Ethers to your address
 
-TBD
+Useful links and tools:
 
-### Lecture materials and outline
+https://web3js.readthedocs.io/en/v1.5.2/
 
+https://www.trufflesuite.com/
 
-#### Technical introduction to blockchain technology (Josip Maričević)
+https://www.trufflesuite.com/ganache
 
-TBD
+https://cryptozombies.io/
 
-#### Hands-on session: Setting up development environment and applications (Igor Jerković)
-
-TBD
-
-#### Hands-on session: Environments and applications for blockchain technology (Josip Maričević, Igor Jerković)
-
-TBD
 
